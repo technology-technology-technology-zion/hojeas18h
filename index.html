@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATRIX V50 AVIATOR</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <video id="background-video" autoplay muted loop>
+        <source src="istockphoto-1310260190-640_adpp_is.mp4" type="video/mp4">
+    </video>
+
+    <form id="loginForm">
+        <h2>CODE-TRIX</h2>
+        <label for="username"></label>
+        <input type="text" id="username" name="username" placeholder="Nome de usuário" required><br><br>
+    
+        <label for="password"></label>
+        <input type="password" id="password" name="password" placeholder="Senha" required>
+        <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()"> Mostrar senha<br><br>
+    
+        <button type="button" onclick="login()">ENTRAR</button>
+        <p id="blockMessage" style="color: red; display: none;"></p>
+        <div class="error-message" id="errorMessage" style="display:none;">Credenciais inválidas. Tente novamente.</div>
+    </form>
+
+     <!-- Painel de Controle (Admin) -->
+     <div id="adminPage" class="hidden">
+        <div id="user-control-box">
+            <h2>Painel de Controle</h2>
+
+            <!-- Exemplo de Usuários -->
+            <div class="user-item">
+                <span>user1 (user)</span>
+                <span class="status active">Status: Ativo</span>
+                <div class="admin-only">
+                    <input type="number" placeholder="Horas" />
+                </div>
+            </div>
+            <div class="user-item">
+                <span>user7 (user)</span>
+                <span class="status inactive">Status: Inativo</span>
+                <div class="admin-only">
+                    <input type="number" placeholder="Horas" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="chooseHousePage" class="hidden">
+        <h2>Escolha sua Casa de Aposta</h2>
+        <button onclick="redirectToMatrix('casa1')">
+            <img src="imagem2.png" alt="Casa 1" />
+        </button>
+        <button onclick="redirectToMatrix('casa2')">
+            <img src="imagem1.png" alt="Casa 2" />
+        </button>
+        <button onclick="redirectToMatrix('casa3')">
+            <img src="imagem3.png" alt="Casa 3" />
+        </button>
+        <button onclick="redirectToMatrix('casa4')">
+            <img src="imagem4.png" alt="Casa 4" />
+        </button>
+    </div>
+
+    <div id="botmatrix" class="hidden">
+        <form class="BotForm">
+            
+            <img id="imagem-girando" src="loading.png" alt="Imagem Girando">
+            <div id="waiting"></div>
+            <div id="mensagem"></div>
+            <div id="relogio" class="relogio"></div>
+            <div id="proxima-previa" style="display:none;"></div>
+            <div id="rodape" class="rodape"></div>
+
+        </form>
+    </div>
+    
+    
+    
+    <script>
+
+         (function() {
+            const threshold = 160; 
+        
+            const redirectToSafePage = () => {
+            window.location.href = "https://pagina-segura.com"; 
+            };
+        
+            const checkDevTools = () => {
+            const widthDiff = window.outerWidth - window.innerWidth;
+            const heightDiff = window.outerHeight - window.innerHeight;
+            
+            
+            if (widthDiff > threshold || heightDiff > threshold) {
+                redirectToSafePage();
+            }
+            };
+        
+            window.addEventListener("resize", checkDevTools);
+            checkDevTools();
+        })();
+        
+        // Função para entrar em tela cheia
+        function entrarEmTelaCheia() {
+            const elemento = document.documentElement; // Seleciona o elemento 'html'
+
+            if (elemento.requestFullscreen) {
+                elemento.requestFullscreen(); // Para navegadores modernos
+            } else if (elemento.mozRequestFullScreen) {
+                elemento.mozRequestFullScreen(); // Firefox
+            } else if (elemento.webkitRequestFullscreen) {
+                elemento.webkitRequestFullscreen(); // Chrome, Safari e Opera
+            } else if (elemento.msRequestFullscreen) {
+                elemento.msRequestFullscreen(); // IE/Edge
+            }
+        }
+
+        // Detecta se está em um dispositivo móvel (largura da tela menor que 768px)
+        if (window.innerWidth <= 768) {
+            window.onload = function() {
+                entrarEmTelaCheia(); // Ativa a tela cheia em dispositivos móveis
+            }
+        }
+
+    
+
+
+
+        
+
+        document.addEventListener('keydown', function (e) {
+            
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+        
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();    
+            }
+        
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+            }
+            });
+        
+        
+            document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+                 
+        
+       
+    </script>
+    <script src="user.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+    
+

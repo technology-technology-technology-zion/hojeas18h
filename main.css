@@ -1,0 +1,595 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Tela de login */
+#loginPage {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#errorMessage {
+    color: red;
+    display: none;
+    margin-top: 10px;
+}
+
+/* Tela de Escolher Casa de Aposta */
+#chooseHousePage {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* Tela de Escolher Casa de Aposta */
+#botmatrix{
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+button img {
+    width: 100px;
+    height: 100px;
+   
+}
+
+h2 {
+    color: #04ff00;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+/* Esconde elementos */
+.hidden {
+    display: none;
+}
+
+/* Estilos para os formulários de login */
+input[type="text"], input[type="password"] {
+    width: 90%;
+    height: 30px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #04ff00;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+button[type="button"] {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+
+form {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 8px;
+    border: 3px solid #04ff00;
+    box-shadow: 0 50px 50px #000000;
+    width: 300px;
+    text-align: center;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+
+input[type="submit"] {
+    width: 90%;
+    padding: 10px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    background-color: #2fff00;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #04ff00;
+}
+
+.password-container {
+    position: relative;
+}
+
+#togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+#togglePassword:hover {
+    color: #333;
+}
+
+#togglePassword:focus {
+    outline: none;
+}
+
+.error-message {
+    color: #04ff00;;
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+/* Estilos para BOT */
+
+.BotForm {
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+
+/* Center the content emoji */  
+#imagem-girando {  
+    
+    display: block; 
+    margin: auto; /* Center the image horizontally */  
+    width: 150px; /* Set a width for the loading image */  
+    height: auto; /* Maintain aspect ratio */  
+    animation: girar .8s linear infinite;
+    margin-top: 0px;
+
+}  
+
+
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+h1#waiting {  
+   
+    font-size: 1em; /* Large font for heading */  
+    margin-top: 20px; /* Space above the heading */  
+    color: #37ff00; /* Change color as needed */  
+}  
+
+#mensagem {  
+    margin-top: 30px; /* Space above the heading */ 
+    margin-bottom: 20px; /* Space above the heading */ 
+    text-align: center; /* Center the heading */  
+    font-size: 2em; /* Large font for heading */  
+    position: center;
+    top: 200%;
+    bottom: 100%;
+    color: #ffd000; /* Change color as needed */ 
+}  
+
+
+
+#relogio { 
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0px;
+}
+
+#proxima-previa {  
+    font-size: 12px;
+    color: #ff00aa;
+    text-align: center;
+    margin: 5px;
+}
+
+
+
+#rodape {  
+    text-align: center; /* Center the footer */  
+    font-size: 0.6em; /* Small font size for footer */  
+    color: #ffffff; /* Light color for footer text */  
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    margin: 20px 0; /* Space around the footer */ 
+    text-align: center;  /* Centraliza o texto horizontalmente */
+    background-color: #000000c0;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    left: 0;  /* Garantir que o rodapé ocupe toda a largura */ 
+
+}  
+
+
+
+
+
+
+/* Efeito de fundo (opcional) */
+.fundo {
+    animation: fundoAnim 5s infinite alternate;
+}
+
+@keyframes fundoAnim {
+    0% {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+
+
+
+
+/* Estilo geral */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* Estilo do vídeo de fundo */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    #background-video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+
+
+
+#adminPage {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+
+
+
+
+
+button {
+    width: 60%; /* Ocupa toda a largura do formulário */
+    padding: 10px 20px; /* Espaçamento interno maior */
+    font-size: 18px; /* Aumenta o tamanho do texto */
+    background-color: #00ff00; /* Verde neon */
+    color: #000; /* Texto preto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o ícone de clique */
+    margin: 10px 0;
+    transition: background-color 0.3s ease; /* Suaviza a transição de cor */
+}
+
+button:hover {
+    background-color: #00cc00; /* Cor mais escura no hover */
+}
+
+
+
+.user-item {
+    margin: 10px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.user-item span {
+    font-weight: bold;
+    margin-left: 5px; /* Menor espaçamento entre o nome e o status */
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px; /* Menor espaçamento entre a bolinha e o texto */
+}
+
+.status-text {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.online {
+    background-color: green;
+}
+
+.offline {
+    background-color: gray;
+}
+
+
+
+.user-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000; /* Fundo preto */
+    color: #00ff00; /* Texto verde neon */
+    padding: 10px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.user-item input {
+    width: 80px;
+    margin: 0 10px;
+    padding: 5px;
+    border: 1px solid #00ff00;
+    border-radius: 3px;
+    background-color: #111;
+    color: #00ff00;
+    text-align: center;
+}
+
+.user-item button {
+    padding: 5px 15px;
+    font-size: 14px;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-item button:hover {
+    background-color: #00cc00;
+}
+
+.user-item .status {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.user-item .status.blocked {
+    color: red;
+}
+
+.user-item .status.active {
+    color: #00ff00;
+}
+
+.user-list {
+    max-width: 400px;
+    margin: auto;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('matrix-background.jpg'); /* Substitua pelo caminho correto */
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: #00ff00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+#login-box, #user-control-box {
+    background-color: #000;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px #00ff00;
+    width: 350px;
+    text-align: center;
+}
+
+#login-box h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+input[type="text"], input[type="password"], input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #111;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    color: #00ff00;
+    text-align: center;
+}
+
+button {
+    width: 90%;
+    padding: 10px;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cc00;
+}
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #000;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.user-item .status {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.user-item .status.blocked {
+    color: red;
+}
+
+.user-item .status.active {
+    color: #00ff00;
+}
+
+
+
+
+/* Ocultar elementos com a classe 'hidden' */
+.hidden {
+    display: none;
+}
+
+/* Layout adicional */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#login-box, #adminPage {
+    background: black;
+    border: 2px solid green;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+}
+
+#login-box h1, #adminPage h2 {
+    color: lime;
+    text-align: center;
+}
+
+.user-item {
+    margin-bottom: 15px;
+}
+
+.user-item span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.active {
+    color: lime;
+}
+
+.status.blocked {
+    color: red;
+}
+
+button {
+    background: lime;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkgreen;
+    color: white;
+}
+
+
+
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 100%; /* Remove o limite de largura em telas menores */
+    }
+
+    button {
+        padding: 8px; /* Menos padding para telas menores */
+        font-size: 16px; /* Ajuste no tamanho da fonte */
+    }
+}
+
+/* Ajustes para telas muito pequenas (como celulares) */
+@media (max-width: 480px) {
+    button {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+
