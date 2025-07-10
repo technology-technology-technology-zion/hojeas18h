@@ -1,28 +1,12 @@
 const previsaoProgramadas = { 
-    "0": [],
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [],
-    "5": [],
-    "6": [],
-    "7": [],
-    "8": [],
-    "9": [],
-    "10": [],
+
     "11": [17,22,30,35,37],
     "12": [9,19,23],
     "13": [5,7,11,23,24,28,31,40,52,53,55,57],
-    "14": [1,3,4,9,12,13,19,21],
-    "15": [],
-    "16": [],
-    "17": [],
-    "18": [],
-    "19": [],
-    "20": [],
-    "21": [],
-    "22": [],
-    "23": [],
+    "14": [1,3,4,9,12,13,19,21],  
+   
+    "22": [8,9,11,18,24,28,29,37,39,42,55],
+    "23": [8,9,11,18,22,27,29,37,39,42,44],
 };
 
 function gerarProtecao() {
@@ -143,20 +127,16 @@ function calcularTempoRestante() {
         const proximaPrevia = document.getElementById('proxima-previa');
         const waiting = document.getElementById('waiting');
 
-        if (!exibindoMensagens) { 
-            // Só exibe o relógio quando não está exibindo mensagens
-            if (relogio) {
-                relogio.innerText = `⌚ ${tempoFormatado}`;
-                relogio.style.display = 'block';
-            }
-        } else {
-            // Certifica-se de que o relógio está oculto durante a exibição de mensagens
-            if (relogio) relogio.style.display = 'none';
-        }
-
         if (minutosRestantes > 40) {
+            // Adicionando log para verificar minutosRestantes
+            console.log("Minutos Restantes (maior que 40):", minutosRestantes);
+            
             if (waiting) {
-                waiting.innerText = '⏳ANALISANDO O GRÁFICO...';
+                // Verifica se o texto da mensagem não está configurado corretamente antes de definir
+                if (waiting.innerText !== '⏳ANALISANDO O GRÁFICO...') {
+                    waiting.innerText = '⏳ANALISANDO O GRÁFICO...';
+                }
+                // Aplica animação para análise do gráfico
                 waiting.style.animation = 'pontosAnimacao 1.5s steps(4, end) infinite';
             }
         
@@ -164,10 +144,22 @@ function calcularTempoRestante() {
                 proximaPrevia.innerText = `Volte quando for ${proximoHorarioGlobal.getHours()}h ${proximoHorarioGlobal.getMinutes().toString().padStart(2, '0')}`;
                 proximaPrevia.style.display = 'block';
             }
+        
+            if (relogio) relogio.style.display = 'none';
         } else {
+            // Adicionando log para verificar minutosRestantes quando for menor que 40
+            console.log("Minutos Restantes (menor que 40):", minutosRestantes);
+        
             if (waiting) {
                 waiting.innerText = 'WAIT FOR THE NEXT SIGNAL';
             }
+        
+            if (relogio) {
+                relogio.innerText = `⌚ ${tempoFormatado}`;
+                relogio.style.display = 'block';
+            }
+        
+            if (proximaPrevia) proximaPrevia.style.display = 'block';
         }
     }
 }
@@ -195,6 +187,3 @@ function mostrarFraseAleatoria() {
 
 mostrarFraseAleatoria();
 setInterval(mostrarFraseAleatoria, 10000);
-
-
-
