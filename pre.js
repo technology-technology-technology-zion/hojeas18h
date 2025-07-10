@@ -10,7 +10,7 @@ const previsaoProgramadas = {
 };
 
 function gerarProtecao() {
-    return parseFloat((Math.random() * (3.60 - 2.00) + 2.00).toFixed(2));
+    return parseFloat((Math.random() * (2.60 - 1.60) + 1.60).toFixed(2));
 }
 
 function gerarSaida() {
