@@ -7,8 +7,8 @@ const admins = {
 const users = {
     'Drick': '1230',
     'Walter': '1231',
-    'matrix@50': '2025',
-    'gratis@': 'hojeas18h',
+    'matrix@adilson': '2025',
+    'MatrixV50': 'Ganhar2077',
 
 };
 
