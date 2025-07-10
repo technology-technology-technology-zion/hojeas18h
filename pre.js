@@ -10,11 +10,11 @@ const previsaoProgramadas = {
 };
 
 function gerarProtecao() {
-    return parseFloat((Math.random() * (2.60 - 1.60) + 1.60).toFixed(2));
+    return parseFloat((Math.random() * (2.20 - 1.60) + 1.60).toFixed(2));
 }
 
 function gerarSaida() {
-    return parseFloat((Math.random() * (8.00 - 5.00) + 5.00).toFixed(2));
+    return parseFloat((Math.random() * (8.00 - 2.20) + 5.00).toFixed(2));
 }
 
 let exibindoMensagens = false;
