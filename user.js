@@ -8,6 +8,7 @@ const users = {
     'Drick': '1230',
     'Walter': '1231',
     'matrix@adilson': '2025',
+    'matrix@africano': '2025'
     'MatrixV50': 'Ganhar2077',
 
 };
