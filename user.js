@@ -7,8 +7,8 @@ const admins = {
 const users = {
     'Drick': '1230',
     'Walter': '1231',
-    'matrix@adilson': '2025',
-    'matrix@africano': '2025'
+    'matrix@adilson': '8877',
+    'matrix@africano': '8877'
 
 };
 
@@ -66,10 +66,10 @@ function loadScriptForHouse(casa) {
             script.src = 'pre.js' 
             break;  
         case 'casa2':  
-            script.src = 'all.js' 
+            script.src = '88pre.js' 
             break;  
         case 'casa3':  
-            script.src = 'all.js' 
+            script.src = '88pre.js' 
             break;  
         case 'casa4':  
             script.src = 'all.js';  
