@@ -72,7 +72,7 @@ function loadScriptForHouse(casa) {
             script.src = '88pre.js' 
             break;  
         case 'casa4':  
-            script.src = 'all.js';  
+            script.src = '88pre.js';  
             break;  
         default:  
             console.error('');  
